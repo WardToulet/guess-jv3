@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^3.0.4"
+  },
+  "scripts": {
+    "start": "node server.mjs"
   }
 }
