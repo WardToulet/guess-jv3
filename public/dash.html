@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=:w, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/tailwind.css">
+
+    <title>Guess JV3</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="js/dash.js"></script>
+</head>
+<body>
+    <header class="text-center ">
+        <h1 class="mt-8 text-4xl">Guess JV3</h1> 
+        <span class="text-2xl">Dahsboard</span> 
+    </header>
+    
+    <hr class="m-8">
+
+    <main class="text-center p-8">
+        <!-- enroll -->
+        <section id="enroll">
+            <form id="enroll-form">
+                <div class="p-4">
+                    <input 
+                        required
+                        id="inp-code"
+                        name="code"
+                        type="text"
+                        placeholder="code"
+                        class="text-center"
+                    >
+                </div>
+                <div class="p-4">
+                    <button class="bg-red-600 py-2 px-6 text-white">Start</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- dash -->
+        <section id="dash" class="hidden">
+            <div class="p-4">
+                <button class="bg-red-600 py-2 px-6 text-white" id="btn-toggle">Volgende ronde</button>
+            </div>
+
+            <div class="p-4">
+                <h1 class="text-4xl">Spelers</h1>
+                <div class="m-4" id="list-players"></div>
+            </div>
+
+            <div class="p-4">
+                <h1 class="text-4xl">Scores</h1>
+                <div class="m-4" id="scoreboard"></div>
+            </div>
+
+            <!-- <div class="p-4"> -->
+            <!--     <h1 class="text-4xl">Woorden</h1> -->
+            <!--     <button class="m-4 bg-red-600 py-2 px-6 text-white">Update</button> -->
+            <!--     <div class="m-4"> -->
+            <!--         <textarea class="text-left" name="inp-word-list" id="inp-word-list" cols="30" rows="10"> -->
+            <!--         </textarea> -->
+            <!--     </div> -->
+            <!-- </div> -->
+        </section>
+    </main>
+</body>
+</html>

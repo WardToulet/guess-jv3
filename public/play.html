@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=:w, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/tailwind.css">
+
+    <title>Guess JV3</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="js/play.js"></script>
+</head>
+<body>
+    <header class="text-center ">
+        <h1 class="mt-8 text-4xl">Guess JV3</h1> 
+        <span class="text-2xl">Speler</span> 
+    </header>
+    
+    <hr class="m-8">
+
+    <main class="text-center p-8">
+        <!-- Enroll -->
+        <section id="enroll">
+            <form id="enroll-form">
+                <div class="p-4">
+                    <input 
+                        required
+                        id="inp-name"
+                        name="name"
+                        type="text"
+                        placeholder="naam"
+                        class="text-center"
+                    >
+                </div>
+                <div class="p-4">
+                    <input 
+                        required
+                        id="inp-code"
+                        name="code"
+                        type="text"
+                        placeholder="code"
+                        class="text-center"
+                    >
+                </div>
+                <div class="p-4">
+                    <button class="bg-red-600 py-2 px-6 text-white">Start</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Draw -->
+        <section id="draw" class="hidden">
+            <h1 class="text-4xl">
+                Het is nu aan jou, je woord is
+            </h1>
+            <h2 id="txt-word" class="text-8xl text-red-600 p-8 uppercase"> hond</h2>
+        </section>
+
+        <!-- Guess -->
+        <section id="guess" class="hidden">
+            <h1 class="text-4xl">
+                Het is nu aan <span id="txt-drawer"></span>
+            </h1>
+            <div>
+                <form id="guess-form">
+                    <input 
+                        id="inp-guess"
+                        name="guess"
+                        placeholder="gok"
+                        class="text-8xl text-red-600 p-8 uppercase"
+                    />
+                    <div class="p-4">
+                        <button role="submit" class="bg-red-600 py-2 px-6 text-white">GOK</button>
+                    </div>
+                </form>
+            </div>
+        </section> 
+
+        <!-- Idle -->
+        <section id="idle" class="hidden">
+            <h1 class="text-4xl">
+                Je bent toegevoegt aan het spel wacht op de volgende ronde.
+            </h1>
+        </section> 
+    </main>
+</body>
+</html>
